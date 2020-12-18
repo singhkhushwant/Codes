@@ -1,23 +1,34 @@
 using namespace std;
 class Fraction{
 private:
-  int numerator;
-  int denominator;
+  int const numerator;
+  int const denominator;
+  int const& x;
 public:
-  Fraction(int numerator, int denominator)
+  void getnumerator() const{
+    cout<<"numerator: "<<numerator<<endl;
+  }
+  void getdenominator() const{
+    cout<<"denominator: "<<denominator<<endl;
+  }
+  void getx() const{
+    cout<<"x: "<<x<<endl;
+  }
+  Fraction(int numerator, int denominator):numerator(numerator), denominator(denominator),x(this->denominator)
   {
     if(denominator==0)
     {
       cout<<"Wrong denominator"<<endl;
       return;
     }
-    this->numerator=numerator;
-    this->denominator=denominator;
+    //this->numerator=numerator;
+    //this->denominator=denominator;
   }
-  void display()
+  void display() const
   {
     cout<<"Fraction is: "<<numerator<<"/"<<denominator<<endl;
   }
+  /*
   void simplify()
   {
     int gcd=1;
@@ -45,4 +56,5 @@ public:
     denominator=denominator * f.denominator;
     simplify();
   }
+  */
 };

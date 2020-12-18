@@ -17,11 +17,15 @@ int32_t main()
   f1.display();
   Fraction f2(100,10);
   f2.display();
-  f1.add(f2);
-  f1.display();
-  f2.display();
-  f1.multiply(f2);
-  f1.display();
-
+  //f1.add(f2);
+  //f1.display();
+  //f2.display();
+  //f1.multiply(f2);
+  //f1.display();
+  Fraction const f3(10,20);
+  f3.display();
+  f3.getnumerator();
+  f3.getdenominator();
+  f3.getx();
   return 0;
 }
